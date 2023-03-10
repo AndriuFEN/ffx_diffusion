@@ -1,20 +1,20 @@
-+-------------------------------+-----------------------------------------------------+
-| Hyperparameter                | Value                                               |
-+-------------------------------+-----------------------------------------------------+
-| v2                            | False                                               |
-| v_parameterization            | False                                               |
-| project_name                  | hknight_lora_v1                                     |
-| pretrained_model_name_or_path | /content/pretrained_model/Anything-v3-1.safetensors |
-| vae                           | /content/vae/anime.vae.pt                           |
-| train_folder_directory        | /content/LoRA/train_data                            |
-| reg_folder_directory          | /content/LoRA/reg_data                              |
-| output_dir                    | /content/LoRA/output                                |
-| resume_path                   | False                                               |
-+-------------------------------+-----------------------------------------------------+
++-------------------------------+-------------------------------------------------------------+
+| Hyperparameter                | Value                                                       |
++-------------------------------+-------------------------------------------------------------+
+| v2                            | False                                                       |
+| v_parameterization            | False                                                       |
+| project_name                  | yunaffx_lora_v1                                             |
+| pretrained_model_name_or_path | /content/pretrained_model/Stable-Diffusion-v1-5.safetensors |
+| vae                           | /content/vae/stablediffusion.vae.pt                         |
+| train_folder_directory        | /content/LoRA/train_data                                    |
+| reg_folder_directory          | /content/LoRA/reg_data                                      |
+| output_dir                    |  /content/drive/MyDrive/Colab_Drives/LORA_TRAINING/output   |
+| resume_path                   | False                                                       |
++-------------------------------+-------------------------------------------------------------+
 +--------------------------------+-------+
 | Hyperparameter                 | Value |
 +--------------------------------+-------+
-| enable_bucket                  | True  |
+| enable_bucket                  | False |
 | resolution                     | 512   |
 | min_bucket_reso                | 256   |
 | max_bucket_reso                | 1024  |
@@ -29,8 +29,8 @@
 +-------------------+---------------+
 | Hyperparameter    | Value         |
 +-------------------+---------------+
-| network_dim       | 4             |
-| network_alpha     | 1             |
+| network_dim       | 128           |
+| network_alpha     | 128           |
 | network_module    | networks.lora |
 | network_weight    | False         |
 | optimizer_type    | AdamW8bit     |
@@ -48,18 +48,18 @@
 | lowram                      | True                         |
 | noise_offset                | 0                            |
 | max_train_type              | max_train_epochs             |
-| max_train_type_value        | 20                           |
-| train_batch_size            | 6                            |
+| max_train_type_value        | 3                            |
+| train_batch_size            | 2                            |
 | mixed_precision             | fp16                         |
 | save_precision              | fp16                         |
 | save_n_epochs_type          | save_n_epoch_ratio           |
-| save_n_epochs_type_value    | 3                            |
+| save_n_epochs_type_value    | 1                            |
 | save_model_as               | safetensors                  |
 | max_token_length            | 225                          |
 | clip_skip                   | 2                            |
 | gradient_checkpointing      | False                        |
 | gradient_accumulation_steps | 1                            |
-| seed                        | -1                           |
+| seed                        | 14                           |
 | logging_dir                 | /content/LoRA/logs           |
 | additional_argument         | --shuffle_caption --xformers |
 +-----------------------------+------------------------------+
