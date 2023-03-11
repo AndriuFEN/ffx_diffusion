@@ -1,0 +1,11 @@
+dataset: 2
+sd: 1.5
+method: dreambooth
+regularization: none
+class images: 16
+
+reg_repeats: 1
+train_repeats: 94
+concept_name: yunaffx
+class_name: woman
+
